@@ -1,0 +1,25 @@
+.labels {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid gray;
+}
+
+.display-container {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid lightgray;
+}
+
+.action-buttons {
+    margin-top: 1em;
+}
+
+.edit-input-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit-input {
+    display: flex;
+    flex-direction: column;
+}

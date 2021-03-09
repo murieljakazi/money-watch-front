@@ -1,17 +1,26 @@
-
-import './App.css';
 import AccountOverview from './components/AccountOverview/AccountOverview';
-import TransactionInput from './components/TransactionInput/TransactionInput';
-import TransactionDisplay from './components/TransactionDisplay/TransactionDisplay';
+import SideMenu from './components/SideMenu';
+import Header from './components/Header'
+import { CssBaseline, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  appMain: {
+    paddingLeft: '320px',
+    width: '100%'
+  }
+})
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <h1>Money Watch</h1>
+    <>
+    <SideMenu />
+    <div className={classes.appMain}>
+      <Header />
       <AccountOverview />
-      <TransactionInput />
-      <TransactionDisplay />
     </div>
+    <CssBaseline />
+    </>
   );
 }
 

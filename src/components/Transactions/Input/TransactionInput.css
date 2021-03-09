@@ -1,6 +1,10 @@
 .input-container {
-    margin: 4em;
+    margin: 4em 1em 4em 1em;
 }
+
+/* .transaction-form {
+    margin: 4em;
+} */
 
 .input-fields {
     display: flex;
