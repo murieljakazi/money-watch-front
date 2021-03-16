@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/money-watch-front/static/css/main.a7b78e2e.chunk.css",
+    "main.js": "/money-watch-front/static/js/main.5c60c63a.chunk.js",
+    "main.js.map": "/money-watch-front/static/js/main.5c60c63a.chunk.js.map",
+    "runtime-main.js": "/money-watch-front/static/js/runtime-main.3616c53d.js",
+    "runtime-main.js.map": "/money-watch-front/static/js/runtime-main.3616c53d.js.map",
+    "static/js/2.42dd1126.chunk.js": "/money-watch-front/static/js/2.42dd1126.chunk.js",
+    "static/js/2.42dd1126.chunk.js.map": "/money-watch-front/static/js/2.42dd1126.chunk.js.map",
+    "static/js/3.3504d05d.chunk.js": "/money-watch-front/static/js/3.3504d05d.chunk.js",
+    "static/js/3.3504d05d.chunk.js.map": "/money-watch-front/static/js/3.3504d05d.chunk.js.map",
+    "index.html": "/money-watch-front/index.html",
+    "static/css/main.a7b78e2e.chunk.css.map": "/money-watch-front/static/css/main.a7b78e2e.chunk.css.map",
+    "static/js/2.42dd1126.chunk.js.LICENSE.txt": "/money-watch-front/static/js/2.42dd1126.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3616c53d.js",
+    "static/js/2.42dd1126.chunk.js",
+    "static/css/main.a7b78e2e.chunk.css",
+    "static/js/main.5c60c63a.chunk.js"
+  ]
+}
