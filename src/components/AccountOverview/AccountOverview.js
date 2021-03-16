@@ -19,6 +19,18 @@ const useStyles = makeStyles({
     },
     labels: {
         margin: 5
+    }, 
+    positive: {
+        color: 'green',
+        fontWeight: 'bold'  
+    },
+    negative: {
+        color: 'red',
+        fontWeight: 'bold'
+    }, 
+    transactionCount : {
+        color: 'blue',
+        fontWeight: 'bold'
     }
 });
 
@@ -27,14 +39,14 @@ const AccountOverview = () => {
     const [accountInfo, setAccountInfo] = useState([]);
 
     const getAccountOverview = () => {
-        const url = '/users/1/accounts/1';
+        const url = `${process.env.REACT_APP_API_SERVER}/users/1/accounts/1`;
         axios
           .get(url)
           .then(res => setAccountInfo(res.data));
     };
 
     const refreshTransactions = () => {
-        const url = '/users/1/accounts/1/transactions';
+        const url = `${process.env.REACT_APP_API_SERVER}/users/1/accounts/1/transactions`;
         axios
           .get(url)
           .then(console.log('Getting transactions...'))
@@ -54,25 +66,25 @@ const AccountOverview = () => {
             <Card className={classes.root}>
                 <CardContent className={classes.content}>
                     <Typography className={classes.labels} component="h2">Current Balance</Typography>
-                    <Typography className={classes.labels}>{accountInfo.balance}</Typography>
+                    <Typography className={`${classes.labels} ${classes.positive}`}>{accountInfo.balance}</Typography>
                 </CardContent>
             </Card>
             <Card className={classes.root}>
                 <CardContent className={classes.content}>
                     <Typography className={classes.labels}>Monthly Spending</Typography>
-                    <Typography className={classes.labels}>{accountInfo.spending}</Typography>
+                    <Typography className={`${classes.labels} ${classes.negative}`}>{accountInfo.spending}</Typography>
                 </CardContent>
             </Card>
             <Card className={classes.root}>
                 <CardContent className={classes.content}>
                     <Typography className={classes.labels}>Deposits</Typography>
-                    <Typography className={classes.labels}>{accountInfo.deposits}</Typography>
+                    <Typography className={`${classes.labels} ${classes.positive}`}>{accountInfo.deposits}</Typography>
                 </CardContent>
             </Card>
             <Card className={classes.root}>
                 <CardContent className={classes.content}>
                     <Typography className={classes.labels}>Monthly Transactions</Typography>
-                    <Typography className={classes.labels}>{accountInfo.transactionCount}</Typography>
+                    <Typography className={`${classes.labels} ${classes.transactionCount}`}>{accountInfo.transactionCount}</Typography>
                 </CardContent>
             </Card>
         </div>

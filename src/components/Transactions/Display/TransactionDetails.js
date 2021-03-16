@@ -69,7 +69,7 @@ const TransactionDetails = (props) => {
     };
 
     const editTransaction = (transactionId) => {
-        const url = `/users/1/accounts/1/transactions/${transactionId}`;
+        const url = `${process.env.REACT_APP_API_SERVER}/users/1/accounts/1/transactions/${transactionId}`;
         axios
           .put(url, updatedTransaction)
           .then(refreshTransactions)
@@ -79,7 +79,7 @@ const TransactionDetails = (props) => {
 
     const deleteTransaction = (transactionId) => {
         console.log(transactionId);
-        const url = `/users/1/accounts/1/transactions/${transactionId}`;
+        const url = `${process.env.REACT_APP_API_SERVER}/users/1/accounts/1/transactions/${transactionId}`;
         axios
           .delete(url)
           .then(res => console.log("toto", res.data))

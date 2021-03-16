@@ -14,6 +14,9 @@ const style = {
     appTitle: {
         color: '#FFF',
         margin: '10px 0 0 70px'
+    },
+    sup: {
+        fontSize: '14px'
     }
 }
 
@@ -23,7 +26,7 @@ function SideMenu(props) {
 
     return (
         <div className={classes.sideMenu}>
-            <h1 className={classes.appTitle}>MoneyWatch</h1>
+            <h1 className={classes.appTitle}>MoneyWatch <sup className={classes.sup}>beta</sup></h1>
         </div>
     )
 }

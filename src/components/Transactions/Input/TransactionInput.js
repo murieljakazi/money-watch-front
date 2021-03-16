@@ -47,8 +47,7 @@ const TransactionInput = (props) => {
     }, [])
 
     const addTransaction = async (e) => {
-        // e.preventDefault();
-        const url = '/users/1/accounts/1/transactions';
+        const url = `${process.env.REACT_APP_API_SERVER}/users/1/accounts/1/transactions`;
         await axios
                 .post(url, newTransaction)
                 .then(() => refreshTransactions())
